@@ -26,6 +26,9 @@ CLASS ZCL_ABAP_GIT IMPLEMENTATION.
   METHOD get_countries.
 
     SELECT * FROM t005 INTO TABLE gt_countries.
+    IF sy-subrc = 0.
+
+    ENDIF.
 
   ENDMETHOD.
 ENDCLASS.
