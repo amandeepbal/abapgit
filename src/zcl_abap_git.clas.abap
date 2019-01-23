@@ -11,7 +11,7 @@ private section.
 
   data GT_COUNTRIES type HRPAD_T005_TAB .
 
-  methods GET_COUNTRIES .
+  methods GET_COUNTRIES_COPY .
 ENDCLASS.
 
 
@@ -23,7 +23,7 @@ CLASS ZCL_ABAP_GIT IMPLEMENTATION.
   endmethod.
 
 
-  METHOD get_countries.
+  METHOD GET_COUNTRIES_COPY.
 
     SELECT * FROM t005 INTO TABLE gt_countries.
     IF sy-subrc = 0.
